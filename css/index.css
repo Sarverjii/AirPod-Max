@@ -1,0 +1,493 @@
+
+@font-face {
+    font-family: Normal_Font;
+    src: url(../Fonts/Dosis-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Stylish_Font;
+    src: url(../Fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Normal_Font;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+
+
+:root{
+    --TextColor : #7fa9ba;
+    --HeadingColor : #3182ab;
+    --ButtonColor : #215779;
+    --ButtonColor_Hover : #092a3e;
+    --Specs : #90989b;
+}
+
+header{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    z-index: 10;
+    top: 0;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    border-bottom: 1px solid white;
+}
+
+#Logo{
+    margin-left: 20px;
+    color: white;
+    font-weight: 550;
+    font-size: clamp(1rem , 2.3vw , 3rem);
+    font-family: Stylish_Font;
+
+}
+
+#nav_bar{
+    display: flex;
+    width: 50%;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+
+#nav_bar div a{
+    color: white;
+    transition: 100ms;
+}
+#nav_bar div a:hover{
+    color: var(--HeadingColor);
+    transition: 100ms;
+
+}
+
+
+#hamburger{
+    display: none;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+#hamburger div{
+    width: 35px;
+    height: 3px;
+    background-color: var(--TextColor);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open #bar1{
+    transform: rotate(-45deg) translate(-6px,6px);
+}
+.open #bar2{
+    opacity: 0;
+}
+
+.open #bar3{
+    transform: rotate(45deg) translate(-6px,-8px);
+}
+
+
+
+#mobile_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 10vh;
+    background-color: black;
+    left: 0;
+    width: 100%;
+    height: 0vh;
+    list-style: none;
+    transition: 0.4s;
+    font-size: 0;
+}
+.open #mobile_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 30vh;
+    transition: 0.4s;
+    font-size: 15px;
+}
+
+#mobile_menu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+}
+
+#mobile_menu li a{
+    color: var(--TextColor);
+
+}
+
+#mobile_menu li:hover{
+    cursor: pointer;
+    background-color: rgba(60,60,60,0.5);
+}
+
+@media(max-width:600px){
+    #nav_bar{
+        display: none;
+    }
+
+    #hamburger{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+.bg1{
+    background-color: black;
+    width: 100%;
+    aspect-ratio: 16/8;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 100px;
+    align-items: center;
+    position: relative;
+}
+
+.bg1 img{
+    height: 90%;
+    align-self: flex-end;    
+}
+.bg1 h1{
+    color: white;
+    font-family: Stylish_Font;
+    font-weight: 400;
+    font-size: 5vw;
+    margin-left: 5%;
+}
+.bg1 div a{
+    margin-left: 10%;
+    padding: 2% 0;
+}
+.bg1 button{
+    background-color: var(--ButtonColor);
+    color: white;
+    border: none;
+    padding: 2% 7%;
+    margin-top: 20%;
+    border-radius: 5px;   
+    cursor: pointer; 
+    transition: 200ms;
+    font-size: clamp(10px, 2vw, 20px);     
+}
+.bg1 button:hover{
+    background-color: var(--ButtonColor_Hover);
+    transition: 200ms;
+}
+
+
+
+
+.bg2{
+    padding: 5% 5%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    width: 100%;
+}
+
+#slider{
+    width: 40%;
+    aspect-ratio: 0.85 / 1;
+    background-size: contain;
+    overflow: hidden;
+}
+
+#slider figure{
+    margin: 0;
+    left: 0;
+    width: 600%;
+    height: 100%;
+    position: relative;
+    animation: 30s slider infinite;
+}
+#slider figure img{
+    height: 100%;
+    float: left;
+    width: 16.6666%;
+}
+
+@keyframes slider {
+    0%{
+        left: 0;
+    }
+    17.5%{
+        left: 0;
+    }
+    20%{
+        left: -100%;
+    }
+    37.5%{
+        left: -100%;
+    }
+    40%{
+        left: -200%;
+    }
+    57.5%{
+        left: -200%;
+    }
+    60%{
+        left: -300%;
+    }
+    77.5%{
+        left: -300%;
+    }
+    80%{
+        left: -400%;
+    }
+    97.5%{
+        left: -400%;
+    }
+    100%{
+        left: -500%
+    }
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.text h2{
+    margin-bottom: 5%;
+    font-family: Stylish_Font;
+    font-size: clamp(1.3rem, 2.5vw , 3rem);
+}
+.text p{
+    color: black;
+    font-size: clamp(0.8rem, 1.5vw, 1.3rem);
+    margin: 0 0 5% 0;
+}
+.text a{
+    width: 24%;
+}
+
+.text button{
+    background-color: var(--ButtonColor);
+    color: white;
+    font-size: clamp(0.8rem, 1.5vw, 1.3rem);
+    border: none;
+    border-radius: 1px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.text button:hover{ 
+    background-color: var(--ButtonColor_Hover);
+}
+
+
+@media(max-width:600px){
+    .bg2{
+        flex-direction: column;
+    }
+    #slider{
+        width: 40%;
+    }
+    .text{
+        width: 90%;
+    }
+}
+
+
+.bg3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/Images/bg3.webp);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+.bg3 h1{
+    color: white;
+    margin: 4%;
+    font-size: 6vw;
+    text-align: center;
+    font-family: Stylish_Font;
+}
+
+.bg3 video{
+    width: 60%;
+
+}
+@media(max-width:600px){
+    .bg3 video{
+        width: 90%;
+    }
+}
+
+.specs{
+    margin: 2% 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.specs section{
+    display: flex;
+    color: var(--Specs);
+    align-items: center;
+    width: clamp(150px, 30%, 400px);
+    justify-content: space-around;
+    margin-top: 2%;
+    border: 2px solid var(--Specs);
+    text-align: center;
+    font-size: clamp(0.8rem, 1.4vw, 1.5rem);
+    padding: 5px;
+}
+
+.specs section img{
+    width: 25%;
+}
+
+.bg4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+    background-color: white;
+}
+.bg4 h1{
+    color: var(--HeadingColor);
+    margin: 4%;
+    font-size: 6vw;
+    text-align: center;
+    font-family: Stylish_Font;
+}
+
+#formm div{
+    width: 100vw;
+    padding: 0 15vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+#formm div section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25rem;
+    margin: 10px 10px;
+}
+#formm div section input{
+    height: 27%;
+    border-width: 1px;
+    border-color: black;
+    padding: 10px;
+    font-size: 15px;
+
+}
+
+#formm div textarea{
+    width: 25rem;
+    font-size: 15px;
+    margin: 10px 10px;
+
+    border-width: 1px;
+    border-color: black;
+    padding: 10px;
+    resize: none;
+
+}
+#formm div section input:hover , #formm div textarea:hover{
+    background-color: rgba(0,0,0,0.25);
+}
+
+
+#submit{
+    background-color: var(--ButtonColor);
+    margin-left: 42.5%;
+    width: 15%;
+    height: 40px;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 5%;
+    cursor: pointer;
+    border: none;
+    transition: 200ms;
+}
+#submit:hover{
+    background-color: var(--ButtonColor_Hover);
+    transition: 200ms;
+}
+
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+
+}
+
+.links a{
+    margin: 0 10px;
+}
+
+#apple{
+    background-image: url(../Images/apple-logo.png);
+    background-size: contain;
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+#linkedin{
+    background-image: url(../Images/linkedin.png);
+    background-size: contain;
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+#github{
+    background-image: url(../Images/github-logo.png);
+    background-size: contain;
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+
+#apple:hover{
+    background-image: linear-gradient(rgba(60,60,60,0.5),rgba(60,60,60,0.5)), url(../Images/apple-logo.png);
+}
+#linkedin:hover{
+    background-image: linear-gradient(rgba(60,60,60,0.5),rgba(60,60,60,0.5)), url(../Images/linkedin.png);
+}
+#github:hover{
+background-image: linear-gradient(rgba(60,60,60,0.5),rgba(60,60,60,0.5)), url(../Images/github-logo.png);}
+
+footer{
+    height: 10vh;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
