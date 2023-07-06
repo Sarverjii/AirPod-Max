@@ -336,12 +336,13 @@ header{
     font-family: Stylish_Font;
 }
 
-.bg3 video{
+.bg3 iframe{
     width: 60%;
+    aspect-ratio: 16/9a;
 
 }
 @media(max-width:600px){
-    .bg3 video{
+    .bg3 iframe{
         width: 90%;
     }
 }
