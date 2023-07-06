@@ -338,7 +338,7 @@ header{
 
 .bg3 iframe{
     width: 60%;
-    aspect-ratio: 16/9a;
+    aspect-ratio: 16/9;
 
 }
 @media(max-width:600px){
